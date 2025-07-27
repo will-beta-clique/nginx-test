@@ -38,24 +38,3 @@ spec:
             port: 80
           initialDelaySeconds: 3
           periodSeconds: 3
-      # 如果需要挂载配置文件或静态文件，可以添加以下volume配置
-      # volumes:
-      # - name: nginx-config
-      #   configMap:
-      #     name: nginx-config
-      # - name: static-content
-      #   emptyDir: {}
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-test
-spec:
-  selector:
-    app: nginx-test
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: ClusterIP  # 根据需求可以改为 NodePort 或 LoadBalancer
