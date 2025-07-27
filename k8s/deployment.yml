@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest  # 可以使用您自定义的镜像，如 my-nginx
+        image: cliquesit.azurecr.io/nginx-test
         ports:
         - containerPort: 80  # 容器暴露的端口
         resources:
