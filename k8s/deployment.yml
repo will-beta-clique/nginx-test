@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx-test
   labels:
-    app: nginx
+    app: nginx-test
 spec:
   replicas: 1  # 副本数
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-test
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-test
     spec:
       containers:
       - name: nginx
@@ -50,10 +50,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-service
+  name: nginx-test
 spec:
   selector:
-    app: nginx
+    app: nginx-test
   ports:
     - protocol: TCP
       port: 80
