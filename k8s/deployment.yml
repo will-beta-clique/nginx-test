@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: cliquesit.azurecr.io/nginx-test
+        image: nginx:latest
         ports:
         - containerPort: 80  # 容器暴露的端口
         resources:
