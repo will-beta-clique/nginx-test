@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:1.29.1
         ports:
         - containerPort: 80  # 容器暴露的端口
         resources:
