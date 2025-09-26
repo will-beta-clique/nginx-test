@@ -5,7 +5,6 @@ metadata:
   labels:
     app: nginx-test
 spec:
-  replicas: 1  # 副本数
   selector:
     matchLabels:
       app: nginx-test
